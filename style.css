@@ -83,29 +83,28 @@ article h3 {
 img:not(.profile-photo) {
     display: block;
     margin-top: 12px;
-    max-width: 220px;
+    max-width: 100%;
     border-radius: 5px;
     border: 1px solid #d4ddee;
     box-shadow: 0 2px 8px 0 rgba(75,90,160,0.15);
 }
 
-/* Profile photo centering, no circle */
+/* Profile photo centering, not circled */
 .profile-photo-wrapper {
     text-align: center;
 }
 
 .profile-photo {
-    width: 160px;     /* or whatever size looks good */
-    height: auto;     /* maintain aspect ratio */
+    width: 160px;
+    height: auto;
     display: inline-block;
     margin-top: 18px;
     margin-bottom: 18px;
     box-shadow: 0 2px 10px rgba(80,100,180,0.14);
-    border-radius: 8px;    /* subtle rounded corners, remove if you want sharp corners */
+    border-radius: 8px;  /* Remove or set to 0 if you want no corner rounding at all */
     object-fit: contain;
 }
 
-/* Form styles */
 form label {
     display: block;
     margin: 11px 0 4px;
@@ -125,8 +124,8 @@ form input, form textarea {
 }
 
 form textarea {
-    min-height: 120px; 
-    resize: vertical;  
+    min-height: 120px;
+    resize: vertical;
 }
 
 form input:focus, form textarea:focus {
