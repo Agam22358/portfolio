@@ -4,56 +4,184 @@
     <meta charset="UTF-8">
     <title>Agam Ghimire's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-        <p>Agam Ghimire</p>
-        <nav>
+    <header class="site-header">
+        <div class="header-top">
+            <h1 class="site-title">My Portfolio</h1>
+            <p class="site-subtitle">Agam Ghimire</p>
+            <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+        </div>
+        <nav class="main-nav">
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#slider">Gallery</a></li>
+                <li><a href="#flexbox-note">Flexbox vs Grid</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="about">
+
+    <main class="site-main">
+       
+        <section id="about" class="card">
             <h2>About Me</h2>
             <div class="profile-photo-wrapper">
                 <img src="me.jpg" alt="Agam Ghimire" class="profile-photo">
             </div>
-            <p> Hi i'm Agam Ghimire, a 2nd year student of Biratnagar International Collage . I'm someone who loves acquring new knowledge and wants to keep looking forward for new oppurtinities and adventures. I love reading weebtoons , watching anime and im also good with games. But i love coding the most .</p>
+            <p>
+                Hi, I'm Agam Ghimire, a 2nd year student at Biratnagar International College.
+                I enjoy learning new things, exploring opportunities and adventures, reading webtoons,
+                watching anime, playing games, and most of all, coding.
+            </p>
         </section>
-        <section id="projects">
+
+   
+        <section id="skills" class="card">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <div class="skill-header">
+                        <span>HTML</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="progress" data-percent="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span>CSS</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="progress" data-percent="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span>JavaScript</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="progress" data-percent="60"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="projects" class="card">
             <h2>Projects</h2>
-            <article>
-                <h3>Portfolio Website</h3>
-                <p>This site showcases my portfolio project HTML code.</p>
-                <img src="image.png" alt="Portfolio screenshot" width="220">
-            </article>
-            <br>
-            <article>
-                <h3>Sole Style</h3>
-                <p>This is my last SEP's project.</p>
-                <img src="shoe.png" alt="Sole Style project screenshot" width="340">
-            </article>
+            <div class="projects-grid">
+                
+                
+               
+                <article class="project-item" data-url="https://agam22358.github.io/SoleStyle/">
+                    <h3>Sole Style</h3>
+                    <p>This is my previous SEP project, an online shoe store concept.</p>
+                    <img src="shoe.png" alt="Sole Style project screenshot">
+                </article>
+            </div>
         </section>
-        <section id="contact">
+
+     
+        <section id="media" class="card">
+            <h2>Media & Canvas</h2>
+            <div class="media-wrapper">
+                <div class="media-block">
+                    <h3>Intro Video</h3>
+                    
+                    <video controls width="260">
+                        <source src="1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="media-block">
+                    <h3>Chill Audio</h3>
+                    
+                    <audio controls>
+                        <source src="audio.m4a" type="audio/mp4">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="media-block">
+                    <h3>Canvas Demo</h3>
+                    <canvas id="myCanvas" width="300" height="180"></canvas>
+                </div>
+            </div>
+        </section>
+
+      
+        <section id="slider" class="card">
+            <h2>Image Slider</h2>
+            <div class="slider-container">
+                <button id="prevBtn" class="slider-btn">⟨</button>
+                <div class="slider-images">
+                    
+                    <img src="1.jpeg" alt="Slider image 1" class="slider-img" style="display:block;">
+                    <img src="2.jpeg" alt="Slider image 2" class="slider-img" style="display:none;">
+                    <img src="3.jpeg" alt="Slider image 3" class="slider-img" style="display:none;">
+                    <img src="4.jpeg" alt="Slider image 4" class="slider-img" style="display:none;">
+                </div>
+                <button id="nextBtn" class="slider-btn">⟩</button>
+            </div>
+        </section>
+
+        
+        <section id="flexbox-note" class="card">
+            <h2>Flexbox vs Grid</h2>
+            <p>
+                Flexbox is best for layouts in a single row or column, while CSS Grid is designed for two-dimensional layouts
+                where both rows and columns are controlled together.
+            </p>
+            <p>
+                In this portfolio, the Projects section uses Flexbox to arrange responsive project cards that wrap nicely on
+                smaller screens.
+            </p>
+        </section>
+
+       
+        <section id="contact" class="card">
             <h2>Contact</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <small class="error" id="messageError"></small>
+                </div>
+
                 <button type="submit">Submit</button>
+                <p id="formStatus" class="form-status"></p>
             </form>
         </section>
     </main>
-    <footer>
+
+    <footer class="site-footer">
         <p>&copy; 2025 Agam Ghimire</p>
     </footer>
+
+    
+    <button id="backToTop" class="back-to-top">↑</button>
 </body>
 </html>
